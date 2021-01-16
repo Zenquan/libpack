@@ -1,0 +1,11 @@
+{
+    "name": "jslib-npm-vuepress-vercel-template",
+    "npmname": "jslib-npm-vuepress-vercel-template",
+    "umdname": "jslib-npm-vuepress-vercel-template",
+    "username": "zenquan",
+    "type": "js",
+    "module": "umd,esm,commonjs",
+    "test": "mocha",
+    "lang": "zh",
+    "version": "1.6.0"
+}
