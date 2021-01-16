@@ -1,5 +1,5 @@
 /*!
- * @jomsou/utils 0.1.1 (https://github.com/zenquan/jslib-npm-vuepress-vercel-template)
+ * jslib-npm-vuepress-vercel-template 0.1.0 (https://github.com/zenquan/jslib-npm-vuepress-vercel-template)
  * API https://github.com/zenquan/jslib-npm-vuepress-vercel-template/blob/master/doc/api.md
  * Copyright 2017-2021 zenquan. All Rights Reserved
  * Licensed under MIT (https://github.com/zenquan/jslib-npm-vuepress-vercel-template/blob/master/LICENSE)
@@ -87,9 +87,37 @@ var Mime = /*#__PURE__*/function () {
   return Mime;
 }();
 
+/** 
+ * @description 作用：测试
+ * @field 2021/01/16
+**/
+var Test = /*#__PURE__*/function () {
+  function Test() {
+    _classCallCheck(this, Test);
+  }
+
+  _createClass(Test, [{
+    key: "test",
+
+    /** 
+    * @description 作用：媒体类型的判断 
+    * @param url {string} 图片的链接
+    * 
+    * @example
+    * ```js
+    * ```
+    **/
+    value: function test(url) {}
+  }]);
+
+  return Test;
+}();
+
 var index = {
-  Mime: Mime
+  Mime: Mime,
+  Test: Test
 };
 
 exports.Mime = Mime;
+exports.Test = Test;
 exports.default = index;
