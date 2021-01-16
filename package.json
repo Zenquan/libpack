@@ -1,7 +1,7 @@
 {
-  "name": "@jomsou/utils",
-  "version": "0.1.1",
-  "description": "悦跑h5小分队工具",
+  "name": "jslib-npm-vuepress-vercel-template",
+  "version": "0.1.0",
+  "description": "轮子模板",
   "main": "dist/index.js",
   "jsnext:main": "dist/index.esm.js",
   "module": "dist/index.esm.js",
