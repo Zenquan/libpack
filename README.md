@@ -1,9 +1,9 @@
-# jslib-npm-vuepress-vercel-template
+# js-lib-starter
 
 > 轮子模板
 
 ## 背景
-轮子模板，结合zen-cli在本地搭建开发环境。
+轮子模板, 快速搭建JavaScript lib开发环境。
 
 ## 特性
 
