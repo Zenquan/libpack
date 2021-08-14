@@ -1,7 +1,5 @@
 # js-lib-starter
 
-> 轮子模板
-
 ## 背景
 轮子模板, 快速搭建JavaScript lib开发环境。
 
