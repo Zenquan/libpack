@@ -1,7 +1,7 @@
 {
-    "name": "jslib-npm-vuepress-vercel-template",
-    "npmname": "jslib-npm-vuepress-vercel-template",
-    "umdname": "jslib-npm-vuepress-vercel-template",
+    "name": "js-lib-starter",
+    "npmname": "js-lib-starter",
+    "umdname": "js-lib-starter",
     "username": "zenquan",
     "type": "js",
     "module": "umd,esm,commonjs",

@@ -1,5 +1,5 @@
 {
-  "name": "jslib-npm-vuepress-vercel-template",
+  "name": "js-lib-starter",
   "version": "0.1.0",
   "description": "轮子模板",
   "main": "dist/index.js",
@@ -33,10 +33,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/zenquan/jslib-npm-vuepress-vercel-template.git"
+    "url": "git://github.com/zenquan/js-lib-starter.git"
   },
   "bugs": {
-    "url": "https://github.com/zenquan/jslib-npm-vuepress-vercel-template/issues"
+    "url": "https://github.com/zenquan/js-lib-starter/issues"
   },
   "files": [
     "/dist",
@@ -75,5 +75,11 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.1.2"
-  }
+  },
+  "homepage": "https://github.com/zenquan/js-lib-starter#readme",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "keywords": []
 }

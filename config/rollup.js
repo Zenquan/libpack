@@ -6,10 +6,10 @@ var version = pkg.version;
 
 var banner = 
 `/*!
- * ${pkg.name} ${version} (https://github.com/zenquan/jslib-npm-vuepress-vercel-template)
- * API https://github.com/zenquan/jslib-npm-vuepress-vercel-template/blob/master/doc/api.md
+ * ${pkg.name} ${version} (https://github.com/zenquan/js-lib-starter)
+ * API https://github.com/zenquan/js-lib-starter/blob/master/doc/api.md
  * Copyright 2017-${(new Date).getFullYear()} zenquan. All Rights Reserved
- * Licensed under MIT (https://github.com/zenquan/jslib-npm-vuepress-vercel-template/blob/master/LICENSE)
+ * Licensed under MIT (https://github.com/zenquan/js-lib-starter/blob/master/LICENSE)
  */
 `;
 
@@ -43,6 +43,6 @@ function getCompiler(opt) {
     });
 }
 
-exports.name = 'jslib-npm-vuepress-vercel-template';
+exports.name = 'js-lib-starter';
 exports.banner = banner;
 exports.getCompiler = getCompiler;

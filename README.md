@@ -1,4 +1,4 @@
-# jslib-npm-vuepress-vercel-template
+# js-lib-starter
 
 > 轮子模板
 
@@ -64,7 +64,7 @@ yarn add @jomsou/utils -S
     const { 
       xxx,
       ...
-    } = window['jslib-npm-vuepress-vercel-template'];
+    } = window['js-lib-starter'];
 <script>
 ```
 

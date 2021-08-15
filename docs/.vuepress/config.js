@@ -42,7 +42,7 @@ module.exports = {
       },
       {
         text: 'Github',
-        link: 'https://github.com/Zenquan/jslib-npm-vuepress-vercel-template'
+        link: 'https://github.com/Zenquan/js-lib-starter'
       },
     ],
     sidebar: {

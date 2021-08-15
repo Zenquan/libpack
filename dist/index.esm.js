@@ -1,8 +1,8 @@
 /*!
- * jslib-npm-vuepress-vercel-template 0.1.0 (https://github.com/zenquan/jslib-npm-vuepress-vercel-template)
- * API https://github.com/zenquan/jslib-npm-vuepress-vercel-template/blob/master/doc/api.md
+ * js-lib-starter 0.1.0 (https://github.com/zenquan/js-lib-starter)
+ * API https://github.com/zenquan/js-lib-starter/blob/master/doc/api.md
  * Copyright 2017-2021 zenquan. All Rights Reserved
- * Licensed under MIT (https://github.com/zenquan/jslib-npm-vuepress-vercel-template/blob/master/LICENSE)
+ * Licensed under MIT (https://github.com/zenquan/js-lib-starter/blob/master/LICENSE)
  */
 
 function _classCallCheck(instance, Constructor) {
