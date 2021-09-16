@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /egg.png
-heroText: jslib-npm-vuepress-vercel-template
+heroText: js-lib-starter
 tagline: 轮子模板
 actionText: 马上进入 →
 actionLink: /pages/folder1/install.md
