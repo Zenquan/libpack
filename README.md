@@ -1,4 +1,6 @@
 # js-lib-starter
+![](https://img.shields.io/badge/version-0.1.0-orange)
+![](https://img.shields.io/github/license/Zenquan/js-lib-starter)
 > js库构建模板, 快速搭建JavaScript lib开发环境。
 
 ## 特性
@@ -24,16 +26,16 @@
 **script**
 ```json
 {
-  // 构建
-  "build": "npm run clean && npm run build:self && npm run build:esm && npm run build:aio && npm run build:aio.min"
+  // 构建js库和文档
+  "build": "npm run clean && npm run build:self && npm run build:esm && npm run build:aio && npm run build:aio.min && npm run docs:build",
   // 由代码中注释生成markdown文档
   "docs:jsdoc2md": "rimraf docs/pages/folder1/api.md && npx jsdoc2md src/* >> docs/pages/folder1/api.md", 
   // 由代码中注释生成markdown文档，并且生成vuepress静态资源文件
   "docs:build": "npm run docs:jsdoc2md && npx vuepress build docs",
   // 由代码中注释生成markdown文档, 并在本地运行vuepress 
   "docs:dev": "npm run docs:jsdoc2md && npx vuepress dev docs", 
-  // 打包生成代码和文档
-  "deploy": "npm run build && npm run docs:build", 
+  // 部署文档到Github Page
+  "deploy:gh": "gh-pages -d docs/.vuepress/dist", 
 }
 ```
 ## 使用案例
@@ -53,7 +55,7 @@ yarn add @jomsou/utils -S
     const { 
       xxx,
       ...
-    } = window['js-lib-starter'];
+    } = window['@jomsou/utils'];
 <script>
 ```
 
