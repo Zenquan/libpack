@@ -77,7 +77,8 @@
     "vuepress": "^1.8.0"
   },
   "dependencies": {
-    "@babel/runtime": "^7.1.2"
+    "@babel/runtime": "^7.1.2",
+    "uglify-es": "github:mishoo/UglifyJS2#harmony"
   },
   "homepage": "https://github.com/zenquan/js-lib-starter#readme",
   "directories": {
