@@ -1,7 +1,7 @@
 # js-lib-starter
 ![](https://img.shields.io/badge/version-0.1.0-orange)
 ![](https://img.shields.io/github/license/Zenquan/js-lib-starter)
-> js库构建模板, 快速搭建JavaScript lib开发环境。
+> 基于rollup+jsdoc+vuepress的js库构建模板, 快速搭建JavaScript lib开发环境。
 
 ## 特性
 
