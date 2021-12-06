@@ -3,8 +3,8 @@ var pkg = require('../package.json');
 
 var version = pkg.version;
 
-var banner = 
-`/*!
+var banner =
+  `/*!
  * ${pkg.name} ${version} (https://github.com/zenquan/js-lib-starter)
  * API https://github.com/zenquan/js-lib-starter/blob/master/doc/api.md
  * Copyright 2017-${(new Date).getFullYear()} zenquan. All Rights Reserved
@@ -13,14 +13,13 @@ var banner =
 `;
 
 function getCompiler(loaders) {
-    console.log('env>>>', process.env.NODE_ENV);
-    return esbuild({
-        include: /\.[jt]s?$/, // default, inferred from `loaders` option
-        exclude: /node_modules/,
-        minify: process.env.NODE_ENV === 'production',
-        loaders,
-        target: 'es2017',
-    });
+  return esbuild({
+    include: /\.[jt]s?$/, // default, inferred from `loaders` option
+    exclude: /node_modules/,
+    minify: process.env.NODE_ENV === 'production',
+    loaders,
+    // target: 'es2017',
+  });
 }
 
 exports.name = 'js-lib-starter';

@@ -4,13 +4,13 @@
 > js库构建模板, 快速搭建JavaScript lib开发环境。
 
 ## 特性
-
 - 通过github actions自动部署到npm
 - 规范化注释后，由jsdoc生成markdown，自动化生成文档，从某种意义上来说养成写文档和注释的习惯。
 - 可使用vercel，自动化部署文档
 - 可使用Github Pages 部署文档
 - 规范化git commit
 - 可生成umd/esm等js文件
+- 支持打包成按需加载
 - 详细的使用案例
 - 可使用mocha编写详细的测试代码
 - 集成测试覆盖率（istanbul+nyc）
