@@ -1,8 +1,8 @@
-var path = require('path');
-var fs = require('fs');
-var dirs = [];
+import path from 'path';
+import fs from 'fs';
 
-function getDirs (pathName) {
+let dirs = [];
+export function getDirs (pathName) {
   if (!pathName) {
     throw new Error('请传入pathName');
   }
@@ -22,6 +22,4 @@ function getDirs (pathName) {
   return dirs;
 }
 
-module.exports = {
-  getDirs
-};
+export const isProd = process.env.NODE_ENV === 'production';

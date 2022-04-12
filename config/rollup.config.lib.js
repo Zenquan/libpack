@@ -1,19 +1,18 @@
-// rollup.config.lib.js
-var GenerateEntry = require('rollup-generate-entry');
-var utils = require('./utils.js');
-var common = require('./rollup.js');
+import GenerateEntry from 'rollup-generate-entry';
+import { getDirs } from './utils';
+import { getCompiler } from './common';
 
-var plugins = [
-  GenerateEntry(''), 
-  common.getCompiler()
+const plugins = [
+  GenerateEntry(),
+  getCompiler()
 ];
 
-var formatConfig = function (inputDir) {
-  var config = [];
-  var dirs = utils.getDirs(inputDir);
+const formatConfig = function () {
+  let config = [];
+  const dirs = getDirs('src');
   dirs.forEach(function (item) {
     config.push({
-      input: inputDir + '/' + item,
+      input: 'src/' + item,
       output: {
         file: 'dist/' + item,
         format: 'es',
@@ -25,4 +24,7 @@ var formatConfig = function (inputDir) {
   return config;
 };
 
-module.exports = formatConfig('src');
+console.log('>>>', formatConfig());
+export default [
+  ...formatConfig()
+]

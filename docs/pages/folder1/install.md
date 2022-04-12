@@ -1,9 +1,11 @@
 # 说明
 
 ## 文档
+
 使用`npm run docs:build`生成文档到`docs/pages/folder1/api.md`。
 
 - 优点：
+
 1. 强迫写详细的注释
 2. 形成文档更加自动化
 
@@ -15,12 +17,12 @@ or
 yarn add @jomsou/utils -S
 ```
 
-- 在原生js中使用
+- 在原生 js 中使用
 
 ```html
-<script src="xx/dist/index.aio.js"></script>
+<script src="xx/dist/index.umd.js"></script>
 <script>
-    const { 
+    const {
       xxx,
       ...
     } = window['jrfe-utils'];
@@ -32,6 +34,6 @@ yarn add @jomsou/utils -S
 ```js
 import JrfeUtils from '@jomsou/utils';
 const { xxx, ... } = JrfeUtils
-or 
+or
 import { xxx } from '@jomsou/utils';
 ```

@@ -1,11 +1,11 @@
 {
-    "name": "js-lib-starter",
-    "npmname": "js-lib-starter",
-    "umdname": "js-lib-starter",
-    "username": "zenquan",
-    "type": "js",
-    "module": "umd,esm,commonjs",
-    "test": "mocha",
-    "lang": "zh",
-    "version": "1.6.0"
+  "name": "js-lib-starter",
+  "npmname": "js-lib-starter",
+  "umdname": "js-lib-starter",
+  "username": "zenquan",
+  "type": "ts",
+  "module": "umd,esm,commonjs",
+  "test": "mocha",
+  "lang": "zh",
+  "version": "1.6.0"
 }

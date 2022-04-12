@@ -5,6 +5,10 @@
  * Licensed under MIT (https://github.com/zenquan/js-lib-starter/blob/master/LICENSE)
  */
 
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
 function test() {
   console.log("test>>>");
 }
@@ -13,4 +17,5 @@ function test2(...arg) {
   console.log("test2>>>", arg);
 }
 
-export { test, test2 };
+exports.test = test;
+exports.test2 = test2;
