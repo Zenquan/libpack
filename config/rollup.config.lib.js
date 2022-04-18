@@ -1,28 +1,25 @@
 // rollup.config.lib.js
-var GenerateEntry = require('rollup-generate-entry');
+var multiEntry = require('rollup-plugin-multi-entry');
 var utils = require('./utils.js');
 var common = require('./rollup.js');
 
-var plugins = [
-  GenerateEntry(''), 
-  common.getCompiler()
-];
+var plugins = [multiEntry(), common.getCompiler()];
 
-var formatConfig = function (inputDir) {
+var formatConfig = function () {
   var config = [];
-  var dirs = utils.getDirs(inputDir);
+  var dirs = utils.getDirs('src');
   dirs.forEach(function (item) {
     config.push({
-      input: inputDir + '/' + item,
+      input: 'src/' + item,
       output: {
-        file: 'dist/' + item,
+        file: 'dist/lib/' + item,
         format: 'es',
-        name: item
+        name: item,
       },
-      plugins: plugins
+      plugins: plugins,
     });
   });
   return config;
 };
 
-module.exports = formatConfig('src');
+module.exports = formatConfig();

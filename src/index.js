@@ -1,12 +1,2 @@
-import Mime from './Mime';
-import Test from './Test';
-
-export {
-    Mime,
-    Test
-};
-
-export default {
-    Mime,
-    Test
-};
+export * from "./test";
+export * from "./test2";

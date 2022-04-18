@@ -1,47 +1,20 @@
 /*!
  * js-lib-starter 0.1.0 (https://github.com/zenquan/js-lib-starter)
  * API https://github.com/zenquan/js-lib-starter/blob/master/doc/api.md
- * Copyright 2017-2021 zenquan. All Rights Reserved
+ * Copyright 2017-2022 zenquan. All Rights Reserved
  * Licensed under MIT (https://github.com/zenquan/js-lib-starter/blob/master/LICENSE)
  */
 
-const mimes = {
-  "css": "text/css",
-  "less": "text/css",
-  "gif": "image/gif",
-  "html": "text/html",
-  "ico": "image/x-icon",
-  "jpeg": "image/jpeg",
-  "jpg": "image/jpg",
-  "js": "text/javascript",
-  "json": "application/json",
-  "pdf": "application/pdf",
-  "png": "image/png",
-  "svg": "image/svg",
-  "swf": "application/x-shockwave-flash",
-  "tiff": "image/tiff",
-  "txt": "text/plain",
-  "wav": "audio/x-wav",
-  "wmv": "video/x-ms-wmv",
-  "wma": "video/x-ms-wma",
-  "xml": "text/xml"
-};
-class Mime {
-  lookup(url) {
-    const urlArr = url.split("/"), len = urlArr.length, mineType = urlArr[len - 1].match(/\.\S+/)[0].match(/[^.]+/)[0];
-    return mimes[mineType];
-  }
+function test() {
+  console.log('test>>>');
 }
 
-class Test {
-  test(url) {
+function test2() {
+  for (var _len = arguments.length, arg = new Array(_len), _key = 0; _key < _len; _key++) {
+    arg[_key] = arguments[_key];
   }
+
+  console.log('test2>>>', arg);
 }
 
-var index = {
-  Mime,
-  Test
-};
-
-export default index;
-export { Mime, Test };
+export { test, test2 };
