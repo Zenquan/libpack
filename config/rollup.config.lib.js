@@ -1,9 +1,9 @@
-import GenerateEntry from 'rollup-generate-entry';
+import multi from '@rollup/plugin-multi-entry';
 import { getDirs } from './utils';
 import { getCompiler } from './common';
 
 const plugins = [
-  GenerateEntry(),
+  multi(),
   getCompiler()
 ];
 
@@ -11,12 +11,14 @@ const formatConfig = function () {
   let config = [];
   const dirs = getDirs('src');
   dirs.forEach(function (item) {
+    const name = item.replace(/\.ts/, '.js');
+
     config.push({
-      input: 'src/' + item,
+      input: `src/${item}`,
       output: {
-        file: 'dist/' + item,
+        file: `dist/lib/${name}`,
         format: 'es',
-        name: item
+        name,
       },
       plugins: plugins
     });
@@ -24,7 +26,6 @@ const formatConfig = function () {
   return config;
 };
 
-console.log('>>>', formatConfig());
 export default [
   ...formatConfig()
 ]
