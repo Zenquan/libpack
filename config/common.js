@@ -1,4 +1,5 @@
-import esbuild from 'rollup-plugin-esbuild'
+import swc from 'unplugin-swc'
+import { isProd } from './utils';
 import pkg from '../package.json';
 
 const version = pkg.version;
@@ -15,14 +16,8 @@ export const banner = `/*!
 `;
 
 export function getCompiler() {
-  return esbuild({
-    include: /\.[jt]sx?$/, // default, inferred from `loaders` option
-    exclude: /node_modules/,
-    minify: process.env.NODE_ENV === 'production',
-    target: 'esnext',
-    jsx: 'transform', // default, or 'preserve'
-    jsxFactory: 'React.createElement',
-    jsxFragment: 'React.Fragment',
-    tsconfig: '../tsconfig.json',
-  });
+  return swc.rollup({
+    minify: isProd,
+    tsconfigFile: 'tsconfig.base.json',
+  })
 }
