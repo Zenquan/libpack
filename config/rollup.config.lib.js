@@ -1,5 +1,5 @@
 import multi from '@rollup/plugin-multi-entry';
-import { getDirs } from './utils';
+import { getDirs, external } from './utils';
 import { getCompiler } from './common';
 
 const plugins = [
@@ -20,7 +20,8 @@ const formatConfig = function () {
         format: 'es',
         name,
       },
-      plugins: plugins
+      external,
+      plugins,
     });
   });
   return config;

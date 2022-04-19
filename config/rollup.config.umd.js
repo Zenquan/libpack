@@ -15,6 +15,7 @@ export default {
   },
   plugins: [
     nodeResolve({
+      preferBuiltins: true,
       extensions: ['.js']
     }),
     commonjs({

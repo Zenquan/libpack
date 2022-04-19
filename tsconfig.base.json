@@ -1,5 +1,3 @@
-
-
 {
   "compilerOptions": {
     "target": "es5",
@@ -14,6 +12,8 @@
     "noImplicitAny": true,
     "allowJs": true,
     "resolveJsonModule": true,
-    "experimentalDecorators": false,
-  }
+    "experimentalDecorators": false
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["./node_modules"]
 }

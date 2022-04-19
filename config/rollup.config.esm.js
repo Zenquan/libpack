@@ -1,4 +1,5 @@
 import { banner, getCompiler } from './common';
+import { external } from './utils';
 
 export default {
   input: 'src/index.ts',
@@ -9,6 +10,7 @@ export default {
     // legacy: true,
     banner,
   },
+  external,
   plugins: [
     getCompiler()
   ]

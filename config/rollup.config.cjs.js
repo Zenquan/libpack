@@ -1,5 +1,5 @@
 import { banner, getCompiler } from './common';
-import { isProd } from './utils';
+import { isProd, external } from './utils';
 
 export default {
   input: 'src/index.ts',
@@ -10,6 +10,7 @@ export default {
     // legacy: true,
     banner,
   },
+  external,
   plugins: [
     getCompiler()
   ]

@@ -1,5 +1,6 @@
 import path from 'path';
 import fs from 'fs';
+import pkg from '../package.json';
 
 let dirs = [];
 export function getDirs (pathName) {
@@ -23,3 +24,5 @@ export function getDirs (pathName) {
 }
 
 export const isProd = process.env.NODE_ENV === 'production';
+
+export const external = Object.keys(pkg.dependencies);
