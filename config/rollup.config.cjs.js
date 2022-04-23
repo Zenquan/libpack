@@ -1,8 +1,8 @@
 import { banner, getCompiler } from './common';
-import { isProd, external } from './utils';
+import { isProd, rollupConfig } from './common';
 
 export default {
-  input: 'src/index.ts',
+  ...rollupConfig,
   output: {
     file: isProd ? 'dist/index.cjs.min.js' : 'dist/index.cjs.js',
     format: 'cjs',
@@ -10,8 +10,5 @@ export default {
     // legacy: true,
     banner,
   },
-  external,
-  plugins: [
-    getCompiler()
-  ]
+  plugins: [getCompiler()],
 };

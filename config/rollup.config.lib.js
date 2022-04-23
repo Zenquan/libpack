@@ -1,11 +1,8 @@
 import multi from '@rollup/plugin-multi-entry';
-import { getDirs, external } from './utils';
-import { getCompiler } from './common';
+import { getDirs } from './utils';
+import { getCompiler, external, onwarn } from './common';
 
-const plugins = [
-  multi(),
-  getCompiler()
-];
+const plugins = [multi(), getCompiler()];
 
 const formatConfig = function () {
   let config = [];
@@ -21,12 +18,11 @@ const formatConfig = function () {
         name,
       },
       external,
+      onwarn,
       plugins,
     });
   });
   return config;
 };
 
-export default [
-  ...formatConfig()
-]
+export default [...formatConfig()];

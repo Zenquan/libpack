@@ -1,8 +1,8 @@
 import { banner, getCompiler } from './common';
-import { external } from './utils';
+import { rollupConfig } from './common';
 
 export default {
-  input: 'src/index.ts',
+  ...rollupConfig,
   output: {
     file: 'dist/index.esm.js',
     format: 'es',
@@ -10,8 +10,5 @@ export default {
     // legacy: true,
     banner,
   },
-  external,
-  plugins: [
-    getCompiler()
-  ]
+  plugins: [getCompiler()],
 };

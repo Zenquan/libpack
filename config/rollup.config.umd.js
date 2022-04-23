@@ -1,10 +1,9 @@
 import nodeResolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
-import { name, banner, getCompiler } from './common';
-import { isProd } from './utils';
+import { name, banner, getCompiler, isProd, rollupConfig, onwarn } from './common';
 
 export default {
-  input: 'src/index.ts',
+  ...rollupConfig,
   output: {
     file: isProd ? 'dist/index.umd.min.js' : 'dist/index.umd.js',
     format: 'umd',
@@ -12,15 +11,24 @@ export default {
     // legacy: true,
     name,
     banner: isProd ? '' : banner,
+    globals: {
+      'regenerator-runtime': 'regeneratorRuntime',
+      dayjs: 'dayjs',
+      clipboard: 'Clipboard',
+      xlsx: 'xlsx',
+      'file-saver': 'fileSaver',
+      qs: 'qs',
+    },
   },
   plugins: [
     nodeResolve({
+      moduleDirectories: ['src'],
       preferBuiltins: true,
-      extensions: ['.js']
+      extensions: ['.js', '.ts', 'jsx', '.tsx'],
     }),
     commonjs({
       include: 'node_modules/**',
     }),
     getCompiler(),
-  ]
+  ],
 };
