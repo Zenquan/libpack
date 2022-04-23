@@ -32,7 +32,7 @@
 | all         | 19.29s     | 3.22s | 2.41s   | 5.99 倍        | 8.00 倍            |
 | es 版本支持 | es5        | es5   | es6+    |                |                    |
 
-此表格基于
+此表格基于以下代码规模
 ```bash
  find . -name "*.ts" | xargs wc -l                                   
      108 ./dom.ts
