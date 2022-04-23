@@ -21,10 +21,6 @@
 
 ## @rollup/plugin-typescript vs swc 打包耗时对比
 
-![no lib](https://s2.loli.net/2022/04/23/UW8cXiMS9sbCRVe.jpg)
-
-![lib](https://s2.loli.net/2022/04/23/8pTOPDcHrg7dSCA.jpg)
-
 |         | typescript | swc    | typescript/swc |
 | ------- | ---------- | ------ | -------------- |
 | esm     | 3.3s       | 315ms  | 10.48 倍       |
