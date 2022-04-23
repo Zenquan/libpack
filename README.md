@@ -32,6 +32,34 @@
 | all         | 19.29s     | 3.22s | 2.41s   | 5.99 倍        | 8.00 倍            |
 | es 版本支持 | es5        | es5   | es6+    |                |                    |
 
+此表格基于
+```bash
+ find . -name "*.ts" | xargs wc -l                                   
+     108 ./dom.ts
+      36 ./mimes.ts
+      94 ./blob.ts
+      10 ./uuid.ts
+     342 ./date.ts
+      40 ./ua.ts
+     104 ./string.ts
+      42 ./modal.ts
+      82 ./toast.ts
+     158 ./storage.ts
+      12 ./delay.ts
+       4 ./unit.ts
+     135 ./file.ts
+      16 ./url.ts
+     110 ./importXlsx.ts
+     373 ./exportXlsx.ts
+     217 ./number.ts
+      18 ./index.ts
+     196 ./lang.ts
+    2097 total
+ 
+ find . -name "*.js" | xargs wc -l                                    
+     228 ./image.js
+```
+
 ## 工作流程
 
 ![截屏2021-09-16 下午1.27.28.png](https://i.loli.net/2021/09/16/lPBFa4pIDyitCAN.png)
