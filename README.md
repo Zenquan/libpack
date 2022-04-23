@@ -19,17 +19,18 @@
 - 集成代码风格校验(eslint)
 - 集成 ISSUE_TEMPLATE
 
-## @rollup/plugin-typescript vs swc 打包耗时对比
+## @rollup/plugin-typescript vs swc vs esbuild 打包耗时对比
 
-|         | typescript | swc    | typescript/swc |
-| ------- | ---------- | ------ | -------------- |
-| esm     | 3.3s       | 315ms  | 10.48 倍       |
-| cjs     | 3.1s       | 344ms  | 9.01 倍        |
-| cjs:min | 2.9s       | 363ms  | 8.00 倍        |
-| umd     | 3s         | 452ms  | 6.64 倍        |
-| umd:min | 3.1s       | 475ms  | 6.53 倍        |
-| lib     | 3.894s     | 1.271s | 3.06 倍        |
-| all     | 19.294s    | 3.22s  | 5.99 倍        |
+|             | typescript | swc   | esbuild | typescript/swc | typescript/esbuild |
+| ----------- | ---------- | ----- | ------- | -------------- | ------------------ |
+| esm         | 3.3s       | 315ms | 322ms   | 10.48 倍       | 10.25              |
+| cjs         | 3.1s       | 344ms | 357ms   | 9.01 倍        | 8.07               |
+| cjs:min     | 2.9s       | 363ms | 245ms   | 8.00 倍        | 11.84              |
+| umd         | 3s         | 452ms | 297ms   | 6.64 倍        | 10.10              |
+| umd:min     | 3.1s       | 475ms | 281ms   | 6.53 倍        | 11.03              |
+| lib         | 3.89s      | 1.27s | 0.905s  | 3.06 倍        | 4.30               |
+| all         | 19.29s     | 3.22s | 2.41s   | 5.99 倍        | 8.00               |
+| es 版本支持 | es5        | es5   | es6+    |                |                    |
 
 ## 工作流程
 

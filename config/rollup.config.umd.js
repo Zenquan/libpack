@@ -1,6 +1,7 @@
 import nodeResolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
-import { name, banner, getCompiler, isProd, rollupConfig, onwarn } from './common';
+import { uglify } from 'rollup-plugin-uglify';
+import { name, banner, getCompiler, isProd, rollupConfig, isTsc } from './common';
 
 export default {
   ...rollupConfig,
@@ -10,7 +11,7 @@ export default {
     // When export and export default are not used at the same time, set legacy to true.
     // legacy: true,
     name,
-    banner: isProd ? '' : banner,
+    banner,
     globals: {
       'regenerator-runtime': 'regeneratorRuntime',
       dayjs: 'dayjs',
@@ -30,5 +31,6 @@ export default {
       include: 'node_modules/**',
     }),
     getCompiler(),
+    isTsc && isProd && uglify(),
   ],
 };

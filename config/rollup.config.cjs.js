@@ -1,5 +1,5 @@
-import { banner, getCompiler } from './common';
-import { isProd, rollupConfig } from './common';
+import { uglify } from 'rollup-plugin-uglify';
+import { banner, getCompiler, isProd, rollupConfig, isTsc } from './common';
 
 export default {
   ...rollupConfig,
@@ -10,5 +10,5 @@ export default {
     // legacy: true,
     banner,
   },
-  plugins: [getCompiler()],
+  plugins: [getCompiler(), isTsc && isProd && uglify()],
 };

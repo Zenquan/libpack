@@ -1,5 +1,4 @@
-import { banner, getCompiler } from './common';
-import { rollupConfig } from './common';
+import { banner, getCompiler, rollupConfig } from './common';
 
 export default {
   ...rollupConfig,

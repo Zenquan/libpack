@@ -1,4 +1,6 @@
 import swc from 'unplugin-swc';
+import typescript from '@rollup/plugin-typescript';
+import esbuild from 'rollup-plugin-esbuild';
 import pkg from '../package.json';
 
 const version = pkg.version;
@@ -13,16 +15,9 @@ export const banner = `/*!
  */
 `;
 
-export function getCompiler() {
-  return swc.rollup({
-    minify: isProd,
-    tsconfigFile: 'tsconfig.base.json',
-  });
-}
-
 export const isProd = process.env.NODE_ENV === 'production';
 
-export const external = Object.keys(pkg.dependencies ?? {});
+export const external = Object.keys(pkg.dependencies || {});
 
 export const onwarn = (warning) => {
   if (
@@ -39,3 +34,26 @@ export const rollupConfig = {
   external,
   onwarn,
 };
+
+const compiler = 'esbuild';
+export const isTsc = compiler === 'typescript';
+
+const compilerInstance = {
+  swc: swc.rollup({
+    minify: isProd,
+    tsconfigFile: 'tsconfig.base.json',
+  }),
+  typescript: typescript({
+    tsconfig: 'tsconfig.base.json',
+    cacheDir: '.rollup.tscache',
+  }),
+  esbuild: esbuild({
+    minify: isProd,
+    tsconfig: 'tsconfig.base.json',
+    target: 'es6',
+  }),
+};
+
+export function getCompiler() {
+  return compilerInstance[compiler];
+}
