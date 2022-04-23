@@ -19,6 +19,22 @@
 - 集成代码风格校验(eslint)
 - 集成 ISSUE_TEMPLATE
 
+## @rollup/plugin-typescript vs swc 打包耗时对比
+
+![no lib](https://s2.loli.net/2022/04/23/UW8cXiMS9sbCRVe.jpg)
+
+![lib](https://s2.loli.net/2022/04/23/8pTOPDcHrg7dSCA.jpg)
+
+|         | typescript | swc    | typescript/swc |
+| ------- | ---------- | ------ | -------------- |
+| esm     | 3.3s       | 315ms  | 10.48 倍       |
+| cjs     | 3.1s       | 344ms  | 9.01 倍        |
+| cjs:min | 2.9s       | 363ms  | 8.00 倍        |
+| umd     | 3s         | 452ms  | 6.64 倍        |
+| umd:min | 3.1s       | 475ms  | 6.53 倍        |
+| lib     | 3.894s     | 1.271s | 3.06 倍        |
+| all     | 19.294s    | 3.22s  | 5.99 倍        |
+
 ## 工作流程
 
 ![截屏2021-09-16 下午1.27.28.png](https://i.loli.net/2021/09/16/lPBFa4pIDyitCAN.png)
