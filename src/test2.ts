@@ -1,5 +1,5 @@
-type argType = string[];
+type argType = string[] | number[];
 
 export function test2(...arg: argType) {
-  console.log('test2>>>', arg);
+  return arg;
 }
