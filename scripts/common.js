@@ -1,7 +1,11 @@
+import fs from 'fs';
 import swc from 'unplugin-swc';
 import typescript from '@rollup/plugin-typescript';
 import esbuild from 'rollup-plugin-esbuild';
 import pkg from '../package.json';
+import vue from 'rollup-plugin-vue';
+import css from 'rollup-plugin-css-only';
+import CleanCSS from 'clean-css';
 
 const version = pkg.version;
 
@@ -30,7 +34,7 @@ export const onwarn = (warning) => {
 };
 
 export const rollupConfig = {
-  input: 'src/index.ts',
+  input: 'src/my-lib.ts',
   external,
   onwarn,
 };
@@ -51,9 +55,23 @@ const compilerInstance = {
     minify: isProd,
     tsconfig: 'tsconfig.base.json',
     target: 'es6',
+    jsx: 'transform',
+    jsxFactory: 'vueJsxCompat',
   }),
 };
 
 export function getCompiler() {
   return compilerInstance[compiler];
 }
+
+export const commonPlugins = [
+  vue({
+    css: false,
+  }),
+  css({
+    output(style) {
+      !fs.existsSync('dist') && fs.mkdirSync('dist');
+      fs.writeFileSync(`dist/${name}.css`, new CleanCSS().minify(style).styles);
+    },
+  }),
+];

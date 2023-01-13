@@ -1,7 +1,7 @@
 import nodeResolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import { uglify } from 'rollup-plugin-uglify';
-import { name, banner, getCompiler, isProd, rollupConfig, isTsc } from './common';
+import { name, banner, getCompiler, isProd, rollupConfig, isTsc, commonPlugins } from './common';
 
 export default {
   ...rollupConfig,
@@ -30,6 +30,7 @@ export default {
     commonjs({
       include: 'node_modules/**',
     }),
+    ...commonPlugins,
     getCompiler(),
     isTsc && isProd && uglify(),
   ],

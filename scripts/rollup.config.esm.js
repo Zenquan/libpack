@@ -1,4 +1,4 @@
-import { banner, getCompiler, rollupConfig } from './common';
+import { banner, getCompiler, rollupConfig, commonPlugins } from './common';
 
 export default {
   ...rollupConfig,
@@ -9,5 +9,5 @@ export default {
     // legacy: true,
     banner,
   },
-  plugins: [getCompiler()],
+  plugins: [...commonPlugins, getCompiler()],
 };
