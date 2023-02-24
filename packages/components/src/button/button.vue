@@ -1,15 +1,15 @@
 <template>
-  <div class="button-primary">按钮</div>
+  <button class="btn">测试按钮</button>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
 export default defineComponent({
-  name: 'button',
+  name: 'lib-button',
 });
 </script>
-<style scoped>
-.button-primary {
-  background: darkcyan;
+<style scoped lang="scss">
+.btn {
+  background: red;
   color: #fff;
 }
 </style>

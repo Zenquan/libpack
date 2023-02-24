@@ -1,0 +1,32 @@
+{
+  "name": "@libpack/components",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./index.ts",
+  "scripts": {
+    "build": "vite build",
+    "build:lib": "esno ./scripts/gen-lib.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.53.0",
+    "@typescript-eslint/parser": "^5.53.0",
+    "@vue/compiler-sfc": "^3.2.47",
+    "@vue/runtime-core": "^3.2.47",
+    "es-module-lexer": "^1.1.1",
+    "esbuild": "^0.17.10",
+    "eslint-plugin-vue": "^9.9.0",
+    "esno": "^0.16.3",
+    "hash-sum": "^2.0.0",
+    "klaw-sync": "^6.0.0",
+    "ora": "^6.1.2",
+    "ts-morph": "^17.0.1",
+    "unplugin-vue-define-options": "^1.2.3",
+    "vite-plugin-dts": "^2.0.0-beta.3"
+  },
+  "dependencies": {
+    "@libpack/utils": "workspace:^1.0.0"
+  }
+}
