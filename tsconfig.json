@@ -1,7 +1,18 @@
 {
-  "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "target": "es6",
-    "experimentalDecorators": true
+    "baseUrl": ".",
+    "jsx": "preserve",
+    "strict": true,
+    "target": "ES2015",
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "lib": [
+      "esnext",
+      "dom"
+    ]
   }
 }
